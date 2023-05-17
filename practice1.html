@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="para">Welcome in the learning session of javascript</p>
+    <p class="para">Right Now we are learning about the Document Object Model</p>
+    <h1 id="heading">Welcome to codeByUtkarsh</h1>
+    <button onclick="changeContent()">CLICK ME</button>
+
+    <script>
+        function changeContent(){
+
+            //we can directly write like this
+            document.getElementById('heading').innerHTML = 'Ohh It means you clicked on the button';
+
+            // Now by taking the references , heading is the object here
+            // const changeHeading = document.getElementById('heading');
+            // changeHeading.innerHTML = 'By Using the Reference Variable';
+
+
+            // const change = document.querySelector('.para');
+            // change.innerHTML = "changed Successfully"
+
+
+            //--> How can we see the total number of classes by same name
+            // console.log(document.getElementsByClassName('para')); 
+
+            //--> How can we see the total number of same kind elements present in the body tag
+            // console.log(document.getElementsByTagName('p'));
+        }
+    </script>
+</body>
+</html>
