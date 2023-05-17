@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;"> Different types of Events in javascript</h1>
+
+
+    <!-- SIMPLE INLINE ALERT() -->
+    <a href="#" onclick="alert('I am awesome , but no one use me')" >
+    <span>Simple Inline alert()</span></a>
+
+
+    <br>
+    <a href="#" onclick="callingFunction()">
+    By Calling a function</a>
+
+    <br>
+    <!-- Thirdway -->
+    <a href="#" id="thirdWay"> Inline Event</a>
+
+    <br>
+    <!-- FourthWay  -->
+    <a href="#" id="FourthWay"> EVENT LISTENER</a>
+
+    <script>
+        //Second way of writing function
+        const callingFunction = () => alert('most common way of writing the function');
+
+        // ThirdWay of writing the function by using the id tag when no onclick event is present
+        const Thirdway = document.getElementById('thirdWay');
+        Thirdway.onclick = function() {
+            alert('most common way of writing the function again')
+        }
+
+        const fourthWay = document.querySelector('#FourthWay');
+        fourthWay.addEventListener('click', ()=>alert('I love this way of writing the functions'))
+    </script>
+</body>
+</html>
