@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p" onmousedown="mouseDown()" onmouseup="mouseUp()">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ullam neque quidem eligendi atque totam est facere, animi laudantium, blanditiis aut quas provident iusto, et repellat magni placeat quae architecto.</p>
+
+    <script>
+        function mouseDown(){
+            document.getElementById('p').style.color = "#f8B627";
+        }
+        function mouseUp(){
+            document.getElementById('p').style.color = "pink";
+        }
+    </script>
+</body>
+</html>
