@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onkeypress="keyPress()" onkeydown="keyDown()" onkeyup="keyUp()">
+    <br>
+    <p id="keys"></p>
+
+    <br>
+
+    <p id="UD"></p>
+    <script>
+        const keyPress= () =>{
+            document.getElementById('keys').innerHTML = `you press ${event.key} and its code is ${event.code}`;
+        }
+
+        const keyDown = () => {
+            document.getElementById('U').innerHTML = 'Key is Down'
+        }
+        
+
+        const keyUp = () => {
+            document.getElementById('UD').innerHTML = 'Key is Up';
+        }
+    </script>
+</body>
+</html>
