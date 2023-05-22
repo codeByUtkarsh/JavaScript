@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        .p{
+            margin-top: 4%;
+            margin-left: 42%;
+            font-size: large;
+            font-weight: 600;
+        }
+        button{
+            padding-top: 0%;
+            margin-left: 44%;
+            align-items: center;
+            border-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <p class="p">Want to know my Name</p>
+            <p id="showMyName" class="p"></p>
+            <button id="btn">CLICH HERE</button>
+        </div>
+    </div>
+    <script>
+        const btn = document.querySelector('#btn');
+        const showMyName = document.querySelector('#showMyName');
+        const showName = () =>{
+            showMyName.innerHTML = `Loading...`;
+            setTimeout(()=>{
+                showMyName.innerHTML = `Utkarsh Srivastava`
+            },1000)}
+        btn.addEventListener('click',showName);
+    </script>
+</body>
+</html>
