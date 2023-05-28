@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parentDiv {
+            background-color: aqua;
+            padding: 10px 10px;
+            border: 10px solid #10ac10;
+            cursor: pointer;
+        }
+        .childDiv {
+            background-color: blueviolet;
+            border:5px solid yellow ;
+        }
+    </style>
+</head>
+<body>
+    <div class="parentDiv"  id="parentId">   
+        <div class="childDiv" id="childId">    
+        </div>
+    </div>
+    <script>
+        const parentId = document.querySelector('#parentId')
+        const childId = document.querySelector('#childId')
+
+        const parentCall =() => {
+            alert('parent div call');
+            console.log('parent')
+        }
+        const childCall = () => {
+            alert('Child Div Call')
+            console.log('child');
+            //event.stopPropagation();
+        }
+
+        parentId.addEventListener('click',parentCall,true); //by defautl the third argument is false if we not give
+        childId.addEventListener('click',childCall,true);
+    </script>
+</body>
+</html>
